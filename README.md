@@ -18,7 +18,7 @@ Hidden step is conneted to future hidden steps for sequencial elements. The hidd
 
 At a really high level, the RNN can "feed each sequence elelnbt both to the output and forward to the next sequence element so that network builds a memeory of the sequence. 
 
-<img src="images/rnn_unrolled.svg" alt="RNN Operations" width="800" height="600"/>
+<img src="images/rnn_unrolled.svg" alt="RNN Operations" width="600" height="400"/>
 
 In a Recurrent Neural Network (RNN), there are three main types of layers: the input layer, the hidden layer (also known as the recurrent step), and the output layer.
 
@@ -33,7 +33,7 @@ At a very high level, we can think of an RNN as feeding each element of the sequ
 
 ## ➡️ Feeding Forward
 
-<img src="images/rnn_operations.svg" alt="RNN Operations" width="800" height="600"/>
+<img src="images/rnn_operations.svg" alt="RNN Operations" width="600" height="400"/>
 
 ### Let's break down the image above. 
 
