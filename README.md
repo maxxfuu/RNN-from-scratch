@@ -1,6 +1,6 @@
 # 🔁 RNN-from-scratch 
 
-## What is RNN ?
+## What is RNN ❓
 
 Let’s explore the concept of Recurrent Neural Networks (RNNs) with an analogy that might be familiar if you've ever watched the weather forecast. Suppose you want to predict the weather for tomorrow. It's intuitive to consider today's weather and the weather from previous days because they are related; yesterday's weather influences today's, which in turn, affects tomorrow's. This sequential nature of data is where RNNs excel.
 
@@ -18,7 +18,7 @@ Magic happens in hidden layer, as shown the arrow depicts the recurrent nature o
 
 Hidden step is conneted to future hidden steps for sequencial elements. The hidden step passes the value in two directions such that it passes to the output layer and the next sequence element. Each hidden step has knowledgeo of previous hidden step values because it is being passed forward sequentially. 
 
-At a really high level, the RNN can "feed each sequence elelnbt both to the output and forward to the next sequence element so that network builds a memeory of the sequence. 
+At a really high level, the RNN can feed each sequence element both to the output and forward to the next sequence element so that network builds a memeory of the sequence. 
 
 <img src="images/rnn_unrolled.svg" alt="RNN Operations" width="600" height="400"/>
 
@@ -37,7 +37,7 @@ At a very high level, we can think of an RNN as feeding each element of the sequ
 
 <img src="images/rnn_operations.svg" alt="RNN Operations" width="600" height="400"/>
 
-### Let's break down the image above. 
+### 🔝 Let's break down the image above. 
 
 1. **Introducing the Input:**
   - Imagine we start with a temperature value, for instance, 64 degrees Fahrenheit. This temperature is our initial data point (input).
