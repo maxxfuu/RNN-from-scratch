@@ -16,4 +16,14 @@ At a really high level, the RNN can "feed each sequence elelnbt both to the outp
 
 ## Feed Forward RNN 
 
+<img src="images/rnn_operations.svg" alt="RNN Operations" width="600" height="400"/>
+
 ![RNN Operations](images/rnn_operations.svg)
+
+Let's break down the image above. 
+1. We begin by passing in a single temperature element such as 64. 
+1. Multiply that by the input weight 
+1. After the multiplication we are left with XI, (X multiplied by I)
+1. Moving forward, we pass the product into the the hidden step where it sums up the value that was just passed in, along with the product of the previous hidden steps input and its respective weights. 
+1. After that we apply a non linear activation function and it gives us XH for the given time step. 
+1. It the feeds XH(t1) to the ouput layer and it gets multiplied by the output weights. 
