@@ -1,6 +1,7 @@
 # 🔁 RNN-from-scratch 
 
-**Introduction**
+## What is RNN ?
+
 Let’s explore the concept of Recurrent Neural Networks (RNNs) with an analogy that might be familiar if you've ever watched the weather forecast. Suppose you want to predict the weather for tomorrow. It's intuitive to consider today's weather and the weather from previous days because they are related; yesterday's weather influences today's, which in turn, affects tomorrow's. This sequential nature of data is where RNNs excel.
 
 Imagine RNNs as students who tries to foreshadow from a fiction novel. A diligent student reads each chapter in order, building an understanding of the plot, characters, and setting as they go. Each new chapter is interpreted based on the preceding ones, accumulating knowledge that influences their expectations and predictions about the story's progression and outcomes. Similar to RNNs, a memory of the storyline helps with making an educated prediction on what the story is going to look like. 
