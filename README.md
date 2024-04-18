@@ -18,8 +18,6 @@ At a really high level, the RNN can "feed each sequence elelnbt both to the outp
 
 <img src="images/rnn_operations.svg" alt="RNN Operations" width="600" height="400"/>
 
-![RNN Operations](images/rnn_operations.svg)
-
 Let's break down the image above. 
 1. We begin by passing in a single temperature element such as 64. 
 1. Multiply that by the input weight 
