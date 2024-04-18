@@ -14,12 +14,16 @@ So, in RNNs, the information flows through loops, allowing the network to pass i
 ### (Part 1️⃣)
 ![Rolled and Unrolled RNN](images/RNN_Overview.png)
 
-input, hidden(recurrent step/recurrence), output layer. 
-Magic happens in hidden layer, as shown the arrow depicts the recurrent nature of this architechture. 
+**The RNN consists of 3 layers.** 
+- Input Layer: This is the layer where the network receives the sequence of data that needs to be processed. 
+- Hidden Layer: Often referred to as the recurrent layer, this is the core of an RNN. It processes the input by maintaining a form of 'memory' about previous inputs. This layer is called "recurrent" because it performs the same task for every single input of a sequence, with the output being dependent on the previous computations. 
+- This layer outputs the result for each input in the sequence.
+ 
+**How does the hidden layer work?** 
+The hidden layer is connected to itself, meaning that each step's output is partially determined by the outputs of previous steps. This self-connection is what we call "recurrence," visually depicted as a loop on architecture diagrams. Each state of the hidden layer passes information to the next state. This allows the layer to pass along memory from one step of the input to the next. For example, in processing a sentence, the hidden layer helps remember the context provided by the first word when it's time to process the second word. 
 
-Hidden step is conneted to future hidden steps for sequencial elements. The hidden step passes the value in two directions such that it passes to the output layer and the next sequence element. Each hidden step has knowledgeo of previous hidden step values because it is being passed forward sequentially. 
+The hidden process the input and passes it in two directions. It passes the output as input into the output layer, which might predict the next word in a sentence or the next feature in a time-series analysis, but most importantly, it feeds forward to the next hidden state in the sequence which helps maintain context or memory across the sequence. 
 
-At a really high level, the RNN can feed each sequence element both to the output and forward to the next sequence element so that network builds a memeory of the sequence. 
 
 ### (Part 2️⃣)
 <img src="images/rnn_unrolled.svg" alt="RNN Operations" width="600" height="400"/>
