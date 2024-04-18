@@ -11,6 +11,7 @@ On the other hand, using a standard dense network (a typical type of neural netw
 So, in RNNs, the information flows through loops, allowing the network to pass information from one step of the sequence to the next. This loop acts like a memory storage that helps the network understand the entire context of the sequence, not just the individual elements. Hence, RNNs are particularly useful for tasks where the relationship between sequentially ordered data points is crucial, such as language translation, speech recognition, and, of course, weather forecasting.
 
 ## 🧠 High-Level Overview 
+### (Part 1)
 ![Rolled and Unrolled RNN](images/RNN_Overview.png)
 
 input, hidden(recurrent step/recurrence), output layer. 
@@ -20,6 +21,7 @@ Hidden step is conneted to future hidden steps for sequencial elements. The hidd
 
 At a really high level, the RNN can feed each sequence element both to the output and forward to the next sequence element so that network builds a memeory of the sequence. 
 
+### (Part 2)
 <img src="images/rnn_unrolled.svg" alt="RNN Operations" width="600" height="400"/>
 
 In a Recurrent Neural Network (RNN), there are three main types of layers: the input layer, the hidden layer (also known as the recurrent step), and the output layer.
