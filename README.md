@@ -1,5 +1,6 @@
 # 🔁 RNN-from-scratch 
 
+**Introduction**
 Let’s explore the concept of Recurrent Neural Networks (RNNs) with an analogy that might be familiar if you've ever watched the weather forecast. Suppose you want to predict the weather for tomorrow. It's intuitive to consider today's weather and the weather from previous days because they are related; yesterday's weather influences today's, which in turn, affects tomorrow's. This sequential nature of data is where RNNs excel.
 
 Imagine RNNs as students who tries to foreshadow from a fiction novel. A diligent student reads each chapter in order, building an understanding of the plot, characters, and setting as they go. Each new chapter is interpreted based on the preceding ones, accumulating knowledge that influences their expectations and predictions about the story's progression and outcomes. Similar to RNNs, a memory of the storyline helps with making an educated prediction on what the story is going to look like. 
@@ -38,32 +39,31 @@ At a very high level, we can think of an RNN as feeding each element of the sequ
 ### Let's break down the image above. 
 
 1. **Introducing the Input:**
-   - Imagine we start with a temperature value, for instance, 64 degrees Fahrenheit. This temperature is our initial data point (input).
+  - Imagine we start with a temperature value, for instance, 64 degrees Fahrenheit. This temperature is our initial data point (input).
 
 2. **Multiplication by Input Weight:**
-   - This input value (64) is multiplied by the network's input weight (denoted as \( W_i \)). 
-   - The result of this operation is represented as \( XI \) (where \( X \) is the input value and \( I \) represents the input weight). This multiplication adjusts the input data’s impact on the network.
+  - This input value (64) is multiplied by the network's input weight (denoted as *W<sub>i</sub>*).
+  - The result of this operation is represented as *XI* (where *X* is the input value and *I* represents the input weight). This multiplication adjusts the input data's impact on the network.
 
 3. **Processing in the Hidden Layer:**
-   - The product \( XI \) is sent to the hidden layer.
-   - Here, \( XI \) is added to the product of the previous output from the hidden layer and its corresponding weight (\( H_{prev} \times W_h \)), where \( H_{prev} \) is the hidden layer's output from the previous step, and \( W_h \) is the weight associated with the hidden layer.
-   - The new input for the hidden layer becomes \( XI + (H_{prev} \times W_h) \).
+  - The product *XI* is sent to the hidden layer.
+  - Here, *XI* is added to the product of the previous output from the hidden layer and its corresponding weight (*H<sub>prev</sub> × W<sub>h</sub>*), where *H<sub>prev</sub>* is the hidden layer's output from the previous step, and *W<sub>h</sub>* is the weight associated with the hidden layer.
+  - The new input for the hidden layer becomes *XI + (H<sub>prev</sub> × W<sub>h</sub>)*.
 
 4. **Applying the Activation Function:**
-   - We apply a non-linear activation function (such as sigmoid or tanh) to the sum obtained in the hidden layer. This function helps the network learn complex patterns by introducing non-linearity.
-   - The output after the activation function is \( XH \), which will serve as \( H_{prev} \) for the subsequent time step.
+  - We apply a non-linear activation function (such as sigmoid or tanh) to the sum obtained in the hidden layer. This function helps the network learn complex patterns by introducing non-linearity.
+  - The output after the activation function is *XH*, which will serve as *H<sub>prev</sub>* for the subsequent time step.
 
 5. **Output Layer Dynamics:**
-   - The \( XH \) value, now representing the current time step's output, is forwarded to the output layer.
-   - It is then multiplied by the output layer's weight (\( W_o \)), and this final product forms the network’s output at this time step.
+  - The *XH* value, now representing the current time step's output, is forwarded to the output layer.
+  - It is then multiplied by the output layer's weight (*W<sub>o</sub>*), and this final product forms the network's output at this time step.
 
 ### 🔑 Key Concepts
 
 1. **Sets of Weights:**
-   - **Input Weights (\( W_i \))**: Scale the input data.
-   - **Hidden Weights (\( W_h \))**: Used within the hidden layer to scale outputs from previous time steps.
-   - **Output Weights (\( W_o \))**: Scale the output from the hidden layer to the final output.
+  - **Input Weights (*W<sub>i</sub>*)**: Scale the input data.
+  - **Hidden Weights (*W<sub>h</sub>*)**: Used within the hidden layer to scale outputs from previous time steps.
+  - **Output Weights (*W<sub>o</sub>*)**: Scale the output from the hidden layer to the final output.
 
 2. **Parameter Sharing:**
-   - A crucial feature of RNNs is the reuse of the same set of weights (\( W_i \), \( W_h \), and \( W_o \)) at each step of the sequence, known as parameter sharing. This approach reduces the total number of parameters the network needs to learn, making it efficient for learning from sequences where past information is key to understanding future states.
-
+  - A crucial feature of RNNs is the reuse of the same set of weights (*W<sub>i</sub>*, *W<sub>h</sub>*, and *W<sub>o</sub>*) at each step of the sequence, known as parameter sharing. This approach reduces the total number of parameters the network needs to learn, making it efficient for learning from sequences where past information is key to understanding future states. This structure enables RNNs to effectively 'remember' past inputs through the hidden layer outputs reused in sequential steps, ideal for applications in time-series analysis, speech recognition, and more.
